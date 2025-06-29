@@ -59,7 +59,7 @@ body{
 }
 
 .background-page{
-    background-image: url(/images/background2.png);
+    background-image: url(../images/background2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
