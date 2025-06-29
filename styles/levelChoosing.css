@@ -1,0 +1,125 @@
+.level-choosing-screen{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 80px;
+    text-align: center;
+    color: rgb(224, 230, 68);
+    padding-top: 0;
+}
+
+body{
+    margin: 0;
+}
+
+.button-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.easy-button{
+    color: white;
+    background-color: rgb(70, 106, 208);
+    width: 300px;
+    height: 100px;
+    border: none;
+    border-radius: 50px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.normal-button{
+    color: white;
+    background-color: rgb(149, 80, 210);
+    width: 300px;
+    height: 100px;
+    border: none;
+    border-radius: 50px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hard-button{
+    color: white;
+    background-color: rgb(222, 33, 55);
+    width: 300px;
+    height: 100px;
+    border: none;
+    border-radius: 50px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back-button{
+    color: white;
+    background-color: rgb(194, 214, 66);
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back-icon{
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.easy-button:hover{
+    background-color: rgb(52, 78, 152);
+}
+
+.normal-button:hover{
+    background-color: rgb(108, 58, 152);
+}
+
+.hard-button:hover{
+    background-color: rgb(155, 23, 38);
+}
+
+.back-button:hover{
+    background-color: rgb(139, 153, 48);
+}
+
+.background-page{
+    background-image: url(/images/background1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Select Mode</title>
+        <link rel="stylesheet" href="styles/modeChoosing.css">
+    </head>
+    <body class="background-page">
+        <div class="mode-choosing-screen js-mode-choosing-screen">
+            <h1>请选择模式</h1>
+            <div class="button-group">
+                <div class="button-container">
+                    <button class="endless-button js-endless-button">无尽模式</button>
+                    <button class="timed-button js-timed-button">限时模式</button>
+                    <button class="back-button js-back-button">
+                        <img src="images/back-icon.png" class="back-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script type="module">
+            import { clickSound } from './scripts/game.js';
+
+            function selectMode(mode){
+                localStorage.setItem('mode', mode);
+                window.location.href = 'levelChoosing.html';
+            }
+
+            document.querySelector('.js-endless-button').addEventListener('click', () => {
+                clickSound.play();
+                setTimeout(() => {
+                    selectMode('endless');
+                }, 200);
+            });
+
+            document.querySelector('.js-timed-button').addEventListener('click', () => {
+                clickSound.play();
+                setTimeout(() => {
+                    selectMode('timed');
+                }, 200);
+            });
+
+            document.querySelector('.js-back-button').addEventListener('click', () => {
+                clickSound.play();
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 200);
+            });
+        </script>
+    </body>
+</html> 

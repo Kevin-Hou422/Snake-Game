@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Select Level</title>
+        <link rel="stylesheet" href="styles/levelChoosing.css">
+    </head>
+    <body class="background-page">
+        <div class="level-choosing-screen js-level-choosing-screen">
+            <h1>请选择难度</h1>
+            <div class="button-group">
+                <div class="button-container">
+                    <button class="easy-button js-easy-button">简单</button>
+                    <button class="normal-button js-normal-button">普通</button>
+                    <button class="hard-button js-hard-button">困难</button>
+                    <button class="back-button js-back-button">
+                        <img src="images/back-icon.png" class="back-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script type="module">
+            import { clickSound } from './scripts/game.js';
+
+            function selectLevel(level){
+                localStorage.setItem('level', level);
+                const mode = localStorage.getItem('mode');
+                setTimeout(() => {
+                    if(mode === 'endless'){
+                        window.location.href = 'game.html';
+                    }
+                    else if(mode === 'timed'){
+                        window.location.href = 'timedGame.html';
+                    }
+                }, 200);
+            }
+
+            document.querySelector('.js-easy-button').addEventListener('click', () => {
+                clickSound.play();
+                setTimeout(() => {
+                    selectLevel('0');
+                }, 200);
+            });
+
+            document.querySelector('.js-normal-button').addEventListener('click', () => {
+                clickSound.play();
+                setTimeout(() => {
+                    selectLevel('1');
+                }, 200);
+            });
+
+            document.querySelector('.js-hard-button').addEventListener('click', () => {
+                clickSound.play();
+                setTimeout(() => {
+                    selectLevel('2');
+                }, 200);
+            });
+
+            document.querySelector('.js-back-button').addEventListener('click', () => {
+                clickSound.play();
+                setTimeout(() => {
+                    window.location.href = 'modeChoosing.html';
+                }, 200);
+            });
+        </script>
+    </body>
+</html> 

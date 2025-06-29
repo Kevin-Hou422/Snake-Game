@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snake Game</title>
+        <link rel="stylesheet" href="styles/timedGame.css">
+    </head>
+    <body>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="current-score">
+            <p class="js-current-score">当前得分: 0</p>
+            <p class="js-timer">剩余时间: 60</p>
+        </div>
+        <button onclick="
+            clickSound.play();
+            window.location.href='index.html';
+        " class="quit-button">退出游戏</button>
+        <script type="module" defer src="scripts/game.js"></script>
+    </body>
+</html>
