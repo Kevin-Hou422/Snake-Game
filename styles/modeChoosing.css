@@ -97,7 +97,7 @@ body{
 }
 
 .background-page{
-    background-image: url(/images/background1.png);
+    background-image: url(../images/background1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
